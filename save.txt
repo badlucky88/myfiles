@@ -1,3 +1,0 @@
-NORTH
-EAST
-EAST
