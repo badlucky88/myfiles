@@ -176,8 +176,16 @@ public class GUI  extends JFrame {
      * NEW - Clear - same as textUI, but new GUI instance created too.
      */
     void clear(){
-
         puzzle = new Sokoban (new File(FILENAME));
+		grid.removeAll();
+		
+		for (int row=0; row<puzzle.getNumRows(); row++) {
+            for (int col=0; col<puzzle.getNumCols(); col++) {
+                cells[row][col] = new GUICell(puzzle.getCell(row, col),row,col);
+                grid.add(cells[row][col]);
+            }
+        }
+		
         stack = new Stack<Direction>();    
                 
         setInformation("Game reset");
@@ -188,7 +196,6 @@ public class GUI  extends JFrame {
      * NEW - Undo - same as textUI
      */
     void undo(){
-        
         if (stack.empty())
             return;
         Direction top = stack.pop();
@@ -196,11 +203,10 @@ public class GUI  extends JFrame {
         clear();
         setInformation("Move Undone"); 
         for (Direction d : oldStack) {
-            puzzle.move(d);            
+            puzzle.move(d);
             stack.push(d);       
         }    
         refreshCells();
-        
     }
 
     /**
