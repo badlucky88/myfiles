@@ -14,12 +14,12 @@ public class GUICell extends JButton {
     public Cell cell;    
     private final int row;
     private final int col;
-    private final ImageIcon targetIcon = new ImageIcon("target.png");
-    private final ImageIcon emptyIcon = new ImageIcon("empty.png");
-    private final ImageIcon wallIcon = new ImageIcon("wall.png");
-    private final ImageIcon boxIcon = new ImageIcon("box.png");
-    private final ImageIcon actorIcon = new ImageIcon("actor.png");
-    private final ImageIcon ontargetIcon = new ImageIcon("ontarget.png");
+    private final ImageIcon targetIcon = new ImageIcon("icons/target.png");
+    private final ImageIcon emptyIcon = new ImageIcon("icons/empty.png");
+    private final ImageIcon wallIcon = new ImageIcon("icons/wall.png");
+    private final ImageIcon boxIcon = new ImageIcon("icons/box.png");
+    private final ImageIcon actorIcon = new ImageIcon("icons/actor.png");
+    private final ImageIcon ontargetIcon = new ImageIcon("icons/ontarget.png");
 
     /**
      * Constructor for objects of class GUICell
